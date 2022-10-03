@@ -57,6 +57,9 @@ body {
     gap: 0.5em;
 }
 
+.logo-image img {
+    margin-bottom: -27px;;
+}
 .right {
     min-width: 60vw;
     flex: 1 1 auto;
@@ -68,11 +71,26 @@ body {
     flex: 1 1 auto;
     background-image: linear-gradient(45deg, #90c7c6, #c0feff);
     font-family: LesTitle2;
-    font-size: calc(1rem + 2vh);
     color: rgb(255, 255, 255);
+    padding: 0 200px 5px 80px;
+
     display: flex;
-    align-items: flex-end;
-    padding: 0 200px 20px 80px;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.instructions h1 {
+    font-size: calc(2rem + 2.5vh);
+    margin: 0;
+}
+
+.instructions .subscribe {
+    font-size: calc(2rem + 1vh);
+    margin: 0;
+}
+
+.instructions .fine-print {
+    font-size: 12px;
 }
 
 form {
@@ -83,6 +101,10 @@ form {
     flex-direction: column;
 }
 
+#main-form,
+.bottom {
+    box-shadow: 0px -1px 3px hsla(179, 33%, 30%, 0.28);
+}
 .form-top {
     display: flex;
     margin-top: 10px;
@@ -96,7 +118,8 @@ form ul {
     flex-wrap: wrap;
     align-content: space-between;
     justify-content: flex-start;
-    gap: 2vw;
+    row-gap: 1vw;
+    column-gap: 2vw;
     max-width: 600px;
 }
 
@@ -137,10 +160,20 @@ form input[type="tel"]:invalid {
     box-shadow: inset 1px 1px 3px rgb(126, 1, 1);
 }
 
+form input[type="text"]:hover,
+form input[type="email"]:hover,
+form input[type="password"]:hover,
+form input[type="tel"]:hover,
+form select:hover {
+box-shadow: inset 1px 1px 24px 1px rgba(47, 95, 238, 0.401);
+}
+
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form input[type="password"]:focus,
-form input[type="tel"]:focus {
+form input[type="tel"]:focus,
+form select:focus,
+.bottom button:focus {
     box-shadow: inset 2px 2px 3px #3e6f6e;
 }
 
@@ -170,7 +203,7 @@ form input + span::after {
 }
 
 .t-shirt {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-left: 80px;
     display: flex;
     flex-direction: column;
@@ -206,7 +239,7 @@ select:focus {
 .spam {
     margin-top: 20px;
     margin-left: 80px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .spam input[type="checkbox"] {
@@ -260,8 +293,19 @@ select:focus {
     font-family: inherit;
     background-image: linear-gradient(45deg, #90c7c6, #c0feff);
     border: 1px solid white;
-    margin-bottom: 50px;
+    color: white;
+}
 
+.member-login {
+    margin: 15px 0px 0px 90px;
+
+}
+
+.member-login a {
+    text-decoration: none;
+    color: hsl(179, 33%, 20%);
+    font-weight:900;
+    margin-left: 8px;
 }
 
 .bottom button:hover {
@@ -270,4 +314,8 @@ select:focus {
 
 .bottom button:active {
     box-shadow: inset 1px 1px 100px 1px rgba(8, 25, 78, 0.401);
+}
+
+.bottom {
+    padding-bottom: 40px;
 }
